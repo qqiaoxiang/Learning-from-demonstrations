@@ -1,1 +1,1 @@
-# Learning-from-demonstration
+# Learning-from-demonstrations
