@@ -123,7 +123,9 @@ def learn(*, network, env, total_timesteps,
     save_path=None,
     **kwargs
 ):
-
+    # network: specify the structure of the policy network and the value function network
+    # env: OpenAI Gym, the training enviroment
+    
     override_params = override_params or {}
     if MPI is not None:
         rank = MPI.COMM_WORLD.Get_rank()
@@ -198,7 +200,11 @@ def learn(*, network, env, total_timesteps,
 
     eval_env = eval_env or env
 
+    # Interacting with the environment and evaluating policy performance
+    # RolloutWorker: Sample the data and store it in the experience replay buffer of the policy. 
+    # Then, train the policy in multiple batches in each cycle and update the target network.
     rollout_worker = RolloutWorker(env, policy, dims, logger, monitor=True, **rollout_params)
+    # After each cycle, evaluate the policy, recorded in the log and output.
     evaluator = RolloutWorker(eval_env, policy, dims, logger, **eval_params)
 
     n_cycles = params['n_cycles']
