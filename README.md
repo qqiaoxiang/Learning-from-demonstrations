@@ -5,11 +5,11 @@ HER is used to enhance sample efficiency in reinforcement learning. It trains ag
 
 ### Parameter Setting
 1. DDPG\
-    The number of layers in the critic/actor networks - 'layers': 3
-    The number of neurons in each hidden layers - 'hidden': 256
-    Learning rate of Critic - 'Q_lr': 0.001
-    Learning rate of Actor - 'pi_lr': 0.001
-    Polyak averaging coefficient - 'polyak': 0.95
+    The number of layers in the critic/actor networks - 'layers': 3\
+    The number of neurons in each hidden layers - 'hidden': 256\
+    Learning rate of Critic - 'Q_lr': 0.001\
+    Learning rate of Actor - 'pi_lr': 0.001\
+    Polyak averaging coefficient - 'polyak': 0.95\
    
 3. HER\
     Replay mode - 'replay_strategy': 'future'
