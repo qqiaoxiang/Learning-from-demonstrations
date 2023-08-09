@@ -3,6 +3,29 @@
 ## Hindsight Experience Replay 
 HER is used to enhance sample efficiency in reinforcement learning. It trains agents more efficiently by introducing additional target samples in the replay buffer and reutilizing the failure experience to achieve the goal.
 
+### Parameter Setting
+1. DDPG\
+    The number of layers in the critic/actor networks - 'layers': 3
+    The number of neurons in each hidden layers - 'hidden': 256
+    Learning rate of Critic - 'Q_lr': 0.001
+    Learning rate of Actor - 'pi_lr': 0.001
+    Polyak averaging coefficient - 'polyak': 0.95
+   
+3. HER\
+    Replay mode - 'replay_strategy': 'future'
+    The number of additional goals used for replay - 'replay_k': 4
+   
+5. Training\
+    Per epoch - 'n_cycles': 50
+    Training batches per cycle - 'n_batches': 40
+    'batch_size': 256
+    'n_test_rollouts': 10, number of test rollouts per epoch
+    'bc_loss': 1, use the behavior cloning loss as an auxilliary loss
+    'q_filter': 1, use Q value filter on the Actor outputs
+    'num_demo': 100, number of expert demomonstration episodes
+    'demo_batch_size': 128, number of samples to be used from the demonstrations buffer
+    'prm_loss_weight': 0.001, primary loss
+    'aux_loss_weight':  0.0078, auxilliary loss(cloning loss)
 
 ### Interpretation of code
 1. ddpg.py\
