@@ -1,7 +1,7 @@
 # Learning-from-demonstrations
 
 ### Generate Expert Demonstration 
-python experiment/data_generation/fetch_data_generation.py
+<code> python experiment/data_generation/fetch_data_generation.py </code>
 
 ## Hindsight Experience Replay 
 HER is used to enhance sample efficiency in reinforcement learning. It trains agents more efficiently by introducing additional target samples in the replay buffer and reutilizing the failure experience to achieve the goal.
