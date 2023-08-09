@@ -1,21 +1,24 @@
 # Learning-from-demonstrations
 
+### Generate Expert Demonstration 
+python experiment/data_generation/fetch_data_generation.py
+
 ## Hindsight Experience Replay 
 HER is used to enhance sample efficiency in reinforcement learning. It trains agents more efficiently by introducing additional target samples in the replay buffer and reutilizing the failure experience to achieve the goal.
 
 ## Parameter Setting
-### DDPG
+1. DDPG\
     The number of layers in the critic/actor networks - 'layers': 3\
     The number of neurons in each hidden layers - 'hidden': 256\
     Learning rate of Critic - 'Q_lr': 0.001\
     Learning rate of Actor - 'pi_lr': 0.001\
     Polyak averaging coefficient - 'polyak': 0.95
    
-### HER
+2. HER\
     Replay mode - 'replay_strategy': 'future'\
     The number of additional goals used for replay - 'replay_k': 4
    
-### Training
+3. Training\
     Per epoch - 'n_cycles': 50\
     Training batches per cycle - 'n_batches': 40\
     'batch_size': 256\
