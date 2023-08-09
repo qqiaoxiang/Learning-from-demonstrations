@@ -4,6 +4,10 @@
  ```
  python experiment/data_generation/fetch_data_generation.py
  ```
+### Training with demonstrations
+```
+python -m baselines.run --alg=her --env=FetchPickAndPlace-v1 --num_timesteps=2.5e6 --demo_file=/Path/to/demo_file.npz
+```
 
 ## Hindsight Experience Replay 
 HER is used to enhance sample efficiency in reinforcement learning. It trains agents more efficiently by introducing additional target samples in the replay buffer and reutilizing the failure experience to achieve the goal.
