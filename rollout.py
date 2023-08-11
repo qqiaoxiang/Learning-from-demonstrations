@@ -1,11 +1,10 @@
 from collections import deque
-
 import numpy as np
 import pickle
-
 from baselines.her.util import convert_episode_to_batch_major, store_args
 
 
+# interact with env to generate the training data.
 class RolloutWorker:
 
     @store_args
