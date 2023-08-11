@@ -50,7 +50,7 @@ HER is used to enhance sample efficiency in reinforcement learning. It trains ag
    Generate experience replay data.
   
 ### actor_critic.py
-   It implements an Actor-Critic network and training. The policy network (Actor) generates actions, and the Q-value network (Critic) evaluates the Q-value for a given combination of observation, goal and action. These networks were utilised to train a RL algorithm to maximise the cumulative rewards of the policy.
+   It implements an Actor-Critic network for training. The policy network (Actor) generates actions, and the Q-value network (Critic) evaluates the Q-value for a given combination of observation, goal and action. These networks were utilised to train a RL algorithm to maximise the cumulative rewards of the policy.
 
 ### normalizer.py
    Two classes, Normalizer and IdentityNormalizer, are implemented to perform ‘Normalisation’ on the input data. 
