@@ -1,13 +1,12 @@
-# DEPRECATED, use --play flag to baselines.run instead
+# DEPRECATED, use '--play' flag to baselines.run instead
+
 import click
 import numpy as np
 import pickle
-
 from baselines import logger
 from baselines.common import set_global_seeds
 import baselines.her.experiment.config as config
 from baselines.her.rollout import RolloutWorker
-
 
 @click.command()
 @click.argument('policy_file', type=str)
@@ -57,6 +56,7 @@ def main(policy_file, seed, n_test_rollouts, render):
     for key, val in evaluator.logs('test'):
         logger.record_tabular(key, np.mean(val))
     logger.dump_tabular()
+
 
 
 if __name__ == '__main__':
