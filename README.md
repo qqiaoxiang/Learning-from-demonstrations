@@ -37,8 +37,9 @@ It needs Python 3.7 or higher, and the TensorFlow should not exceed 2.x. The tra
     'aux_loss_weight':  0.0078, auxilliary loss(cloning loss)
 
 ## Interpretation of code
+
 ### ddpg.py
-    It covers all the code needed to implement DDPG algorithm, including Actor-Critic networks, experience replay and demonstration buffers, neural network models, and training procedures.
+    It implements DDPG algorithm, including Actor-Critic networks, experience replay and demonstration buffers, neural network models, and training procedures.
     
 ### her.py
    Hindsight Experience Replay (HER) was used to improve the efficiency of the sample data.
