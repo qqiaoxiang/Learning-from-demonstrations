@@ -13,7 +13,7 @@ Training in different environments by changing the variable ’--env= ', such as
 ### Hindsight Experience Replay (HER) 
 HER is used to enhance sample efficiency in reinforcement learning. It trains agents more efficiently by introducing additional target samples in the replay buffer and reutilizing the failure experience to achieve the goal.
 
-It needs Python 3.7 or higher, and the TensorFlow should not exceed 2.x. The training result video can be accessed from the directory ‘result_video/‘ and then downloaded by clicking 'view raw'.
+It needs Python 3.7 or higher, and the TensorFlow should not exceed 2.x. The training result video can be accessed from the directory result_video/ and then downloaded by clicking 'view raw'.
 
 ## Parameter Setting
 1. DDPG\
