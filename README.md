@@ -4,7 +4,7 @@
  ```
  python experiment/data_generation/fetch_data_generation.py
  ```
-### Training with demonstrations
+### Training with demonstrations and her
 ```
 python -m baselines.run --alg=her --env=FetchPickAndPlace-v1 --num_timesteps=7.5e6 --demo_file=/Path/to/demo_file.npz
 ```
