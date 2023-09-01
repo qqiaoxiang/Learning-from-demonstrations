@@ -39,7 +39,7 @@ It needs Python 3.7 or higher, and the TensorFlow should not exceed 2.x. The tra
 ## Interpretation of code
 
 ### ddpg.py
-    It implements DDPG algorithm, including Actor-Critic networks, experience replay and demonstration buffers, neural network models, and training procedures.
+    It implements DDPG algorithm, including Actor-Critic networks, experience replay and demonstration buuffers, neuural network models and training procedures.
     
 ### her.py
    Hindsight Experience Replay (HER) was used to improve the efficiency of the sample data.
